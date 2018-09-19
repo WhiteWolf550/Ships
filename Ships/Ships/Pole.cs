@@ -5,9 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Ships {
-    class Program {
-        static void Main(string[] args) {
-            
-        }
+    class Pole {
     }
 }
