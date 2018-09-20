@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ships {
     class Player {
-        public int[,] Playerloc = new int[10, 10];
+        //public int[,] Playerloc = new int[10, 10];
+        
     }
 }

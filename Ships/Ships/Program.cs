@@ -9,6 +9,8 @@ namespace Ships {
         static void Main(string[] args) {
 
             Pole pole = new Pole();
+            Player player = new Player();
+
             for (int x = 0; x < pole.plocha.GetLength(0); x++) {
 
                 for (int y = 0; y < pole.plocha.GetLength(1); y++) {

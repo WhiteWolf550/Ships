@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace Ships {
     class Ships {
         public bool IsDestroyed = false;
-        public int[,] Shiploc = new int[10, 10];
+        //public int[,] Shiploc = new int[10, 10];
     }
 }
