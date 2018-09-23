@@ -8,5 +8,6 @@ namespace Ships {
     class Ships {
         public bool IsDestroyed = false;
         //public int[,] Shiploc = new int[10, 10];
+
     }
 }

@@ -10,15 +10,37 @@ namespace Ships {
 
             Pole pole = new Pole();
             Player player = new Player();
-
-            for (int x = 0; x < pole.plocha.GetLength(0); x++) {
-
-                for (int y = 0; y < pole.plocha.GetLength(1); y++) {
-                    pole.plocha[x, y] = "L";
-                    Console.Write(" " + pole.plocha[x, y]);
-                }
-                Console.WriteLine();
-            } 
+            int xs = 0;
+            int ys = 0;
+            //pole.plocha[0, 5] = "O";
+            pole.Sea();
+            /*var command = Console.ReadKey().Key;
+            switch (command)
+            {
+                case ConsoleKey.DownArrow:
+                    ys++;
+                    pole.plocha[xs, ys] = "O";
+                    break;
+                case ConsoleKey.UpArrow:
+                    if (ys > 0)
+                    {
+                        ys--;
+                        pole.plocha[xs, ys] = "O";
+                    }
+                    break;
+                case ConsoleKey.LeftArrow:
+                    if (xs > 0)
+                    {
+                        xs--;
+                        pole.plocha[xs, ys] = "O";
+                    }
+                    break;
+                case ConsoleKey.RightArrow:
+                    xs++;
+                    pole.plocha[xs, ys] = "O";
+                    break;
+            }*/
+        } 
         }
     }
-}
+
