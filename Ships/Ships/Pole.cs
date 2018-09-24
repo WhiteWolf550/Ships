@@ -16,7 +16,11 @@ namespace Ships {
                 for (int y = 0; y < plocha.GetLength(1); y++)
                 {
                     plocha[x, y] = "L";
-                    Ship();
+                    plocha[6, 5] = "O";
+                    plocha[1, 1] = "O";
+                    plocha[9, 9] = "O";
+                    plocha[9, 8] = "O";
+                    //Ship();
                     Console.Write(" " + plocha[x, y]);
                 }
                 Console.WriteLine();
