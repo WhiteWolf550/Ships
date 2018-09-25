@@ -10,7 +10,7 @@ namespace Ships {
         public string[,] plocha = new string[10, 10];
         int xs = 3;
         int ys = 3;
-        public void BaseSea()
+        /*public void BaseSea()
         {
             for (int x = 0; x < plocha.GetLength(0); x++)
             {
@@ -23,7 +23,7 @@ namespace Ships {
                 }
                 Console.WriteLine();
             }
-        }
+        }*/
         public void Sea()
         {
             for (int x = 0; x < plocha.GetLength(0); x++)

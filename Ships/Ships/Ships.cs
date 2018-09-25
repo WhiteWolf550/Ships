@@ -9,7 +9,7 @@ namespace Ships {
         public bool IsDestroyed = false;
         //public int[,] Shiploc = new int[10, 10];
 
-        public void ShipAttack() {
+        public void EnemyAttack() {
             Random rn = new Random();
             int hitx = rn.Next(1, 9);
             int hity = rn.Next(1, 9);

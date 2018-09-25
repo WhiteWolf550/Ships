@@ -14,7 +14,7 @@ namespace Ships {
             int xs = 0;
             int ys = 0;
             //pole.plocha[0, 5] = "O";
-            pole.BaseSea();
+            //pole.BaseSea();
             Console.WriteLine("Zadej X:");
             xs = Console.Read();
             Console.WriteLine("Zadej Y:");
