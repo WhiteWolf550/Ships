@@ -11,17 +11,21 @@ namespace Ships {
             Pole pole = new Pole();
             Player player = new Player();
             Ships ship = new Ships();
-            int xs = 0;
-            int ys = 0;
-            //pole.plocha[0, 5] = "O";
-            //pole.BaseSea();
-            Console.WriteLine("Zadej X:");
-            xs = Console.Read();
-            Console.WriteLine("Zadej Y:");
-            ys = Console.Read();
-            Console.WriteLine("");
-            pole.Sea();
-            
+            string xs;
+            string ys;
+            pole.BaseSea();
+            do {
+                Console.WriteLine("Zadej X:");
+                xs = Console.ReadLine();
+                Console.WriteLine("Zadej Y:");
+                ys = Console.ReadLine();
+                int xr = Convert.ToInt32(xs);
+                int yr = Convert.ToInt32(ys);
+                //Console.WriteLine("xx" + xs + "xx");
+                //Console.WriteLine("yy" + yr + "yy");
+                Console.WriteLine("");
+                pole.Sea(xr, yr);
+            } while (5 == 5); 
         } 
         }
     }

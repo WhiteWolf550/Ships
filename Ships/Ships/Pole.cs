@@ -8,37 +8,34 @@ namespace Ships {
     class Pole {
         public int size = 10;
         public string[,] plocha = new string[10, 10];
-        int xs = 3;
-        int ys = 3;
-        /*public void BaseSea()
+        Ships lod = new Ships();
+        public void BaseSea()
         {
+            Console.WriteLine(" 0 1 2 3 4 5 6 7 8 9");
             for (int x = 0; x < plocha.GetLength(0); x++)
             {
 
                 for (int y = 0; y < plocha.GetLength(1); y++)
                 {
-                    plocha[x, y] = "L";
+                    plocha[y, x] = "L";
                     //Ship();
-                    Console.Write(" " + plocha[x, y]);
+                    Console.Write(" " + plocha[y, x]);
                 }
                 Console.WriteLine();
             }
-        }*/
-        public void Sea()
+        }
+        public void Sea(int xs, int ys)
         {
+            Console.WriteLine(" 0 1 2 3 4 5 6 7 8 9");
             for (int x = 0; x < plocha.GetLength(0); x++)
             {
 
                 for (int y = 0; y < plocha.GetLength(1); y++)
                 {
-                    plocha[x, y] = "L";
-                    plocha[6, 5] = "O";
-                    plocha[1, 1] = "O";
-                    plocha[9, 9] = "O";
-                    plocha[9, 8] = "O";
-                    plocha[xs, ys] = "O";
-                    //Ship();
-                    Console.Write(" " + plocha[x, y]);
+                    plocha[y, x] = "L";
+                    
+                    plocha[ys, xs] = "O";
+                    Console.Write(" " + plocha[y, x]);
                 }
                 Console.WriteLine();
             }
