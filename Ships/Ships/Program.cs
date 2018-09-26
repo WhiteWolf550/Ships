@@ -15,6 +15,17 @@ namespace Ships {
             string ys;
             pole.BaseSea();
             do {
+                Random rn = new Random();
+                int rn1x = rn.Next(0, 10);
+                int rn1y = rn.Next(0, 10);
+                int rn2x = rn.Next(0, 10);
+                int rn2y = rn.Next(0, 10);
+                int rn3x = rn.Next(0, 10);
+                int rn3y = rn.Next(0, 10);
+                int rn4x = rn.Next(0, 10);
+                int rn4y = rn.Next(0, 10);
+                int rn5x = rn.Next(0, 10);
+                int rn5y = rn.Next(0, 10);
                 Console.WriteLine("Zadej X:");
                 xs = Console.ReadLine();
                 Console.WriteLine("Zadej Y:");
@@ -24,7 +35,9 @@ namespace Ships {
                 //Console.WriteLine("xx" + xs + "xx");
                 //Console.WriteLine("yy" + yr + "yy");
                 Console.WriteLine("");
-                pole.Sea(xr, yr);
+                // pole.state = "O";
+                pole.Sea(rn1x, rn1y, rn2x, rn2y, rn3x, rn3y);
+                ship.EnemyAttack(rn1x, rn1y, rn2x, rn2y, rn3x, rn3y);
             } while (5 == 5); 
         } 
         }

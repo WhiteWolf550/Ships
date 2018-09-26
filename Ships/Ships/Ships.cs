@@ -8,11 +8,12 @@ namespace Ships {
     class Ships {
         public bool IsDestroyed = false;
         //public int[,] Shiploc = new int[10, 10];
-
-        public void EnemyAttack() {
+        Pole pole = new Pole();
+        public void EnemyAttack( int ys, int xs, int ye, int xe, int ) {
             Random rn = new Random();
-            int hitx = rn.Next(1, 9);
-            int hity = rn.Next(1, 9);
+            if (pole.plocha[hity, hitx] == pole.plocha[ys, xs]) {
+
+            }
 
 
         }
