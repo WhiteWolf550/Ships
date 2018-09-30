@@ -53,9 +53,9 @@ namespace Ships {
                 Console.WriteLine("X:" + hitx + "Y" + hity);
                 pole.Seaattack(hity, hitx, rn1y, rn1x,rn1y, rn1x, rn2y, rn2x, rn3y, rn3x);
                 Console.WriteLine("--------------------------");
-                Console.WriteLine("Random1-Y:" + rn1x + "X:" + rn1y);
+                /*Console.WriteLine("Random1-Y:" + rn1x + "X:" + rn1y);
                 Console.WriteLine("Random2-Y:" + rn2x + "X:" + rn2y);
-                Console.WriteLine("Random3-Y:" + rn3x + "X:" + rn3y);
+                Console.WriteLine("Random3-Y:" + rn3x + "X:" + rn3y);*/
                 //ship.EnemyAttack(hitx, hity, rn1x, rn1y);
             } while (4 == 5); 
         } 
