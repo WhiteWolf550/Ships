@@ -15,6 +15,7 @@ namespace Ships {
             string ys;
             string hitxs;
             string hitys;
+            Console.WriteLine("Pole Player1:");
             pole.BaseSea();
             Random rn = new Random();
             int rn1x = rn.Next(0, 10);
@@ -27,6 +28,8 @@ namespace Ships {
             int rn4y = rn.Next(0, 10);
             int rn5x = rn.Next(0, 10);
             int rn5y = rn.Next(0, 10);
+            Console.WriteLine(" ");
+            pole.Sea(rn1x, rn1y, rn2x, rn2y, rn3x, rn3y);
             do {
                 
                 /*Console.WriteLine("Zadej X:");
@@ -41,9 +44,10 @@ namespace Ships {
                 // pole.state = "O";
                 Console.WriteLine(rn1x + rn1y);
                 Console.WriteLine("Random1-Y:" + rn1x + "X:" + rn1y);
-                Console.WriteLine("Random2-Y:" + rn2x + "X:" + rn2y);
-                Console.WriteLine("Random3-Y:" + rn3x + "X:" + rn3y);
-                pole.Sea(rn1x, rn1y, rn2x, rn2y, rn3x, rn3y);
+                Console.WriteLine("Random2-Y:" + rn2y + "X:" + rn2x);
+                Console.WriteLine("Random3-Y:" + rn3y + "X:" + rn3x);
+                //pole.Sea(rn1x, rn1y, rn2x, rn2y, rn3x, rn3y);
+                Console.WriteLine("Útočí Player2:");
                 Console.WriteLine("attack Zadej X:");
                 hitxs = Console.ReadLine();
                 Console.WriteLine("attack Zadej Y:");
@@ -57,7 +61,7 @@ namespace Ships {
                 Console.WriteLine("Random2-Y:" + rn2x + "X:" + rn2y);
                 Console.WriteLine("Random3-Y:" + rn3x + "X:" + rn3y);*/
                 //ship.EnemyAttack(hitx, hity, rn1x, rn1y);
-            } while (4 == 5); 
+            } while (5 == 5); 
         } 
         }
     }

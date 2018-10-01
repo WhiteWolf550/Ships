@@ -24,12 +24,14 @@ namespace Ships {
                 Console.WriteLine();
             }
         }
-        public void EnemyAttack(int hsy, int hsx, int ty, int tx) {
-            if (plocha[hsy, hsx] == plocha[ty, tx]) {
+        public void EnemyAttack(int hsy, int hsx, int ty, int tx, int t2y, int t2x, int t3y, int t3x) {
+            if (hsy == tx && hsx == ty) {
                 plocha[ty, tx] = "X";
-                Console.WriteLine(ty + tx + hsy + hsy);  ///////////////Pozor!
-            }else {
-                plocha[ty, tx] = "Z";
+                //Console.WriteLine(ty + tx + hsy + hsy);  ///////////////Pozor!
+            }else if(hsy == t2y && hsx == t2x) {
+                plocha[t2x, t2y] = "X";
+            } else if (hsy == t3y && hsx == t3x) {
+                plocha[t3x, t3y] = "X";
             }
         }
         public void Sea(int xs, int ys, int xe, int ye, int xt, int yt)
@@ -58,9 +60,9 @@ namespace Ships {
 
                     plocha[y, x] = state;
                     plocha[ys, xs] = "O";
-                    plocha[xe, ye] = "O";
-                    plocha[xt, yt] = "O";
-                    EnemyAttack(hy, hx, yrs, xrs);
+                    plocha[ye, xe] = "O";
+                    plocha[yt, xt] = "O";
+                    EnemyAttack(hy, hx, yrs, xrs, xe, ye, xt, yt);
                     Console.Write(" " + plocha[y, x]);
                 }
                 Console.WriteLine();
