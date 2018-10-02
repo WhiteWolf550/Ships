@@ -8,6 +8,7 @@ namespace Ships {
     class Pole {
         public int size = 10;
         public string state = "L";
+        public string state2 = "X";
         public string[,] plocha = new string[10, 10];
         public void BaseSea()
         {
