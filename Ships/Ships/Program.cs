@@ -48,6 +48,8 @@ namespace Ships {
 
                 
                 Console.Clear();
+
+                //HRAJE HRÁČ 2.....
                 Console.WriteLine("Pole Player1: ");
                 pole.Player1Sea(player1rn1x, player1rn1y, player1rn2x, player1rn2y, player1rn3x, player1rn3y);
                 Console.WriteLine("Útočí Player2:");
@@ -58,15 +60,17 @@ namespace Ships {
                 Console.WriteLine("Random2-Y:" + player1rn2x + "X:" + player1rn2y);
                 Console.WriteLine("Random3-Y:" + player1rn3x + "X:" + player1rn3y);
                 hitys = Console.ReadLine();
-
                 int hitx = Convert.ToInt32(hitxs);
                 int hity = Convert.ToInt32(hitys);
                 Console.WriteLine("X:" + hitx + "Y" + hity);
-                Console.Clear();
+                //Console.Clear();
+                Console.WriteLine("Pole Player1: ");
                 pole.Player1Seaattack(hity, hitx, player1rn1y, player1rn1x, player1rn1y, player1rn1x, player1rn2y, player1rn2x, player1rn3y, player1rn3x);
                 Console.WriteLine("--------------------------");
                 Console.ReadKey();
                 Console.Clear();
+
+                //HRAHE HRÁČ 1....
                 Console.WriteLine("Pole Player2: ");
                 pole.Player2Sea(player2rn1x, player2rn1y, player2rn2x, player2rn2y, player2rn3x, player2rn3y);
                 Console.WriteLine("Útočí Player1:");
@@ -79,9 +83,10 @@ namespace Ships {
                 Console.WriteLine("X:" + hitx2 + "Y" + hity2);
                 Console.WriteLine("Pole Player2: ");
                 pole.Player2Seaattack(hity2, hitx2, player2rn1y, player2rn1x, player2rn1y, player2rn1x, player2rn2y, player2rn2x, player2rn3y, player2rn3x);
-                Console.WriteLine("Random1-Y:" + player1rn1x + "X:" + player1rn1y);
-                Console.WriteLine("Random2-Y:" + player1rn2x + "X:" + player1rn2y);
-                Console.WriteLine("Random3-Y:" + player1rn3x + "X:" + player1rn3y);
+                Console.WriteLine("Random1-Y:" + player2rn1x + "X:" + player2rn1y);
+                Console.WriteLine("Random2-Y:" + player2rn2x + "X:" + player2rn2y);
+                Console.WriteLine("Random3-Y:" + player2rn3x + "X:" + player2rn3y);
+                Console.ReadKey();
                 //ship.EnemyAttack(hitx, hity, rn1x, rn1y);*/
             } while (5 == 5); 
         } 

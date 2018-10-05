@@ -102,10 +102,10 @@ namespace Ships {
                         plocha[ys, xs] = "X";
                     }
                     if (Player1hlp2 == true) {
-                        plocha[ye, xe] = "X";
+                        plocha[xe, ye] = "X";
                     }
                     if (Player1hlp3 == true) {
-                        plocha[yt, xt] = "X";
+                        plocha[xt, yt] = "X";
                     }
                     Console.Write(" " + plocha[y, x]);
                 }
@@ -130,10 +130,10 @@ namespace Ships {
                         plocha[ys, xs] = "X";
                     }
                     if (Player2hlp2 == true) {
-                        plocha[ye, xe] = "X";
+                        plocha[xe, ye] = "X";
                     }
                     if (Player2hlp3 == true) {
-                        plocha[yt, xt] = "X";
+                        plocha[xt, yt] = "X";
                     }
                     Console.Write(" " + plocha[y, x]);
                 }
