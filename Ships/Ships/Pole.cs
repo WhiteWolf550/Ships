@@ -15,6 +15,8 @@ namespace Ships {
         bool Player2hlp1 = false;
         bool Player2hlp2 = false;
         bool Player2hlp3 = false;
+        public int player1_ships_destroyed = 0;
+        public int player2_ships_destroyed = 0;
         string hitmes = "";
         public string[,] plocha = new string[10, 10];
         public void BaseSea()
@@ -26,7 +28,6 @@ namespace Ships {
                 for (int y = 0; y < plocha.GetLength(1); y++)
                 {
                     plocha[y, x] = "L";
-                    //Ship();
                     Console.Write(" " + plocha[y, x]);
                 }
                 Console.WriteLine();
@@ -37,21 +38,22 @@ namespace Ships {
         public void Player2Attack(int hsy, int hsx, int ty, int tx, int t2y, int t2x, int t3y, int t3x) {
             if (hsy == tx && hsx == ty) {
                 plocha[ty, tx] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď! Dobrá práce!";
+                player1_ships_destroyed++;
                 Player1hlp1 = true;
-                //Console.ForegroundColor = ConsoleColor.Red;
-                //Console.WriteLine(ty + tx + hsy + hsy);  ///////////////Pozor!
             }else if(hsy == t2y && hsx == t2x) {
                 plocha[t2x, t2y] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď!Dobrá práce!";
+                player1_ships_destroyed++;
                 Player1hlp2 = true;
                 
             } else if (hsy == t3y && hsx == t3x) {
                 plocha[t3x, t3y] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď! Dobrá práce!";
+                player1_ships_destroyed++;
                 Player1hlp3 = true;
             }else {
-                hitmes = "MISS!";
+                hitmes = "Škoda žádnou loď jsi netrefil, možná příště!";
             }
 
             
@@ -61,24 +63,25 @@ namespace Ships {
         public void Player1Attack(int hsy, int hsx, int ty, int tx, int t2y, int t2x, int t3y, int t3x) {
             if (hsy == tx && hsx == ty) {
                 plocha[ty, tx] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď! Dobrá práce!";
+                player2_ships_destroyed++;
                 Player2hlp1 = true;
-                //Console.ForegroundColor = ConsoleColor.Red;
-                //Console.WriteLine(ty + tx + hsy + hsy);  ///////////////Pozor!
             }
             else if (hsy == t2y && hsx == t2x) {
                 plocha[t2x, t2y] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď! Dobrá práce!";
+                player2_ships_destroyed++;
                 Player2hlp2 = true;
 
             }
             else if (hsy == t3y && hsx == t3x) {
                 plocha[t3x, t3y] = "X";
-                hitmes = "HIT!";
+                hitmes = "Trefil jsi loď! Dobrá práce!";
+                player2_ships_destroyed++;
                 Player2hlp3 = true;
             }
             else {
-                hitmes = "MISS!";
+                hitmes = "Škoda žádnou loď jsi netrefil, možná příště!";
             }
         }
             
@@ -115,7 +118,7 @@ namespace Ships {
 
         //POLE PLAYER2..............
         public void Player2Sea(int xs, int ys, int xe, int ye, int xt, int yt) {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" 0 1 2 3 4 5 6 7 8 9");
             Console.ForegroundColor = ConsoleColor.White;
             for (int x = 0; x < plocha.GetLength(0); x++) {
@@ -155,12 +158,15 @@ namespace Ships {
                     plocha[yt, xt] = "O";
                     if (Player1hlp1 == true) {
                         plocha[ys, xs] = "X";
+                        
                     }
                     if (Player1hlp2 == true) {
                         plocha[ye, xe] = "X";
+                        
                     }
                     if(Player1hlp3 == true) {
                         plocha[yt, xt] = "X";
+                        
                     }
                     Player2Attack(hy, hx, yrs, xrs, xe, ye, xt, yt);
                     Console.Write(" " + plocha[y, x]);
@@ -168,12 +174,14 @@ namespace Ships {
                 Console.WriteLine();
                 
             }
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(hitmes);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         //POLE PLAYER2 PO ÚTOKU................
         public void Player2Seaattack(int hy, int hx, int yrs, int xrs, int ys, int xs, int xe, int ye, int xt, int yt) {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" 0 1 2 3 4 5 6 7 8 9");
             Console.ForegroundColor = ConsoleColor.White;
             for (int x = 0; x < plocha.GetLength(0); x++) {
@@ -186,12 +194,15 @@ namespace Ships {
                     plocha[yt, xt] = "O";
                     if (Player2hlp1 == true) {
                         plocha[ys, xs] = "X";
+                        
                     }
                     if (Player2hlp2 == true) {
                         plocha[ye, xe] = "X";
+                        
                     }
                     if (Player2hlp3 == true) {
                         plocha[yt, xt] = "X";
+                        
                     }
                     Player1Attack(hy, hx, yrs, xrs, xe, ye, xt, yt);
                     Console.Write(" " + plocha[y, x]);
@@ -199,7 +210,9 @@ namespace Ships {
                 Console.WriteLine();
 
             }
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(hitmes);
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

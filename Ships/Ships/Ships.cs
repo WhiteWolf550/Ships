@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 namespace Ships {
     class Ships {
         public bool IsDestroyed = false;
+        public bool end = false;
         //public int[,] Shiploc = new int[10, 10];
         Pole pole = new Pole();
+
+        
+            
   
 
 
